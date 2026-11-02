@@ -244,7 +244,7 @@ export function mountPaint(container, options = {}) {
     try {
       const link = element(doc, 'a');
       link.href = canvas.toDataURL('image/png');
-      link.download = 'offline-club-picture.png';
+      link.download = '90s-club-picture.png';
       doc.body.append(link);
       link.click();
       link.remove();

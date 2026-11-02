@@ -54,7 +54,7 @@ function mountPlayer(container, kind, { initialTrack = 'bsb-iwant', autoplay = f
   root.tabIndex = -1;
   root.setAttribute('aria-label', kind === 'music' ? 'Bedroom mixtape player' : 'Bedroom television');
   const heading = el(doc, 'div', 'media-heading');
-  heading.append(el(doc, 'span', 'media-kicker', kind === 'music' ? 'A BEDROOM MIXTAPE' : 'JUST ONE MORE CHANNEL'), el(doc, 'span', 'media-brand', kind === 'music' ? 'OFFLINE / STEREO' : 'OFFLINE / COLOUR TV'));
+  heading.append(el(doc, 'span', 'media-kicker', kind === 'music' ? 'A BEDROOM MIXTAPE' : 'JUST ONE MORE CHANNEL'), el(doc, 'span', 'media-brand', kind === 'music' ? "90's-club / STEREO" : "90's-club / COLOUR TV"));
   root.append(heading);
 
   const cassette = el(doc, 'div', 'media-cassette');

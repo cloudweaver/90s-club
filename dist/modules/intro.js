@@ -50,8 +50,8 @@ export function mountIntro(container, { onEnter } = {}) {
   const controller = new win.AbortController();
   const root = doc.createElement('section');
   root.className = 'intro-root intro-running';
-  root.setAttribute('aria-label', 'Welcome to Offline Club');
-  root.innerHTML = `<div class="intro-top"><span class="intro-wordmark">OFFLINE CLUB <span aria-hidden="true">✳</span></span><button type="button" class="intro-skip">Skip intro <span aria-hidden="true">↗</span></button></div>
+  root.setAttribute('aria-label', "Welcome to 90's-club");
+  root.innerHTML = `<div class="intro-top"><span class="intro-wordmark">90's-club <span aria-hidden="true">✳</span></span><button type="button" class="intro-skip">Skip intro <span aria-hidden="true">↗</span></button></div>
     <div class="intro-content"><div class="intro-stage" aria-hidden="true"><div class="intro-orbit"></div><div class="intro-pc">${PC}</div><div class="intro-tile intro-tile-game"><div class="intro-tile-bar"><i></i><span>play.exe</span></div>${GAME}</div><div class="intro-tile intro-tile-paint"><div class="intro-tile-bar"><i></i><span>paint.exe</span></div>${PAINT}</div><div class="intro-tile intro-tile-flower"><div class="intro-tile-bar"><i></i><span>take a breath</span></div>${FLOWER}</div><span class="intro-scene-caption">a softer kind of screen time</span></div>
     <div class="intro-copy"><p class="intro-eyebrow">HELLO, OLD FRIEND.</p><h1>A little internet<br>time machine.</h1><p class="intro-description">A few old favorites. A blank page.<br>A slower afternoon.</p><button type="button" class="intro-enter">Step inside <span aria-hidden="true">→</span></button><p class="intro-footnote">Make something. Play a little. Stay awhile.</p></div></div>
     <div class="intro-bottom"><span class="intro-caption">a small place to be, for a little while</span><button type="button" class="intro-motion">Pause animation</button></div>`;

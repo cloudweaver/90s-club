@@ -1,16 +1,16 @@
-# Offline Club
+# 90's-club
 
 **You’re home. It’s Friday evening, 1999.**
 
 ### [Step inside the bedroom →](https://offline-club-98.btc0days.chatgpt.site)
 
-![A tour of Offline Club’s interactive 1999 bedroom: the computer pops out, the Pokémon binder opens and a tiny virtual pet gets a snack](docs/bedroom-preview.gif)
+![A tour of 90's-club’s interactive 1999 bedroom: the computer pops out, the Pokémon binder opens and a tiny virtual pet gets a snack](docs/bedroom-preview.gif)
 
 [View the full bedroom illustration](docs/bedroom-preview.jpg)
 
 The computer is on the desk. Your favourite band is on the wall. There’s a mixtape where you left it, and no school tomorrow. Click something familiar and stay awhile.
 
-[Explore the live room](https://offline-club-98.btc0days.chatgpt.site) · [Browse the source on GitHub](https://github.com/cloudweaver/offline-club)
+[Explore the live room](https://offline-club-98.btc0days.chatgpt.site) · [Browse the source on GitHub](https://github.com/cloudweaver/90s-club)
 
 ## Look around
 

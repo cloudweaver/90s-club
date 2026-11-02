@@ -1,4 +1,4 @@
-name: Offline Club checks
+name: 90's-club checks
 on:
   push:
   pull_request:

@@ -1,9 +1,9 @@
 {
-  "name": "offline-club",
+  "name": "90s-club",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "A little desktop escape, somewhere around 1998.",
+  "description": "90's-club: a little bedroom escape, somewhere around 1999.",
   "scripts": {
     "dev": "python3 -m http.server 4178 --bind 127.0.0.1 --directory dist",
     "check": "node --check dist/app.js && node --check dist/modules/games.js && node --check dist/modules/apps.js && node --check dist/modules/intro.js && node --check dist/modules/bedroom.js && node --check dist/modules/media.js && node --check dist/modules/collections.js && node --check dist/assets/icons.js",
