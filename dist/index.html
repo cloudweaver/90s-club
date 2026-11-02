@@ -3,35 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3efdf">
-  <meta name="description" content="A little desktop escape, somewhere around 1998. Play a small game, draw something, or listen to the rain. Make yourself at home.">
+  <meta name="theme-color" content="#25203d">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="It's Friday evening, 1999. Explore a pixel bedroom, open the old PC, play an 80s/90s mixtape, watch the CRT television, and flick through your Pokémon binder.">
   <meta property="og:title" content="Offline Club — a little internet time machine">
-  <meta property="og:description" content="A few old favorites. A blank page. A slower afternoon. Make yourself at home.">
+  <meta property="og:description" content="A bedroom full of things you remember. A computer full of little games. An 80s/90s mixtape waiting to play.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://offline-club-98.btc0days.chatgpt.site">
-  <title>Offline Club — somewhere around 1998</title>
+  <title>Offline Club — your bedroom, 1999</title>
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./modules/games.css">
   <link rel="stylesheet" href="./modules/apps.css">
   <link rel="stylesheet" href="./modules/intro.css">
+  <link rel="stylesheet" href="./modules/bedroom.css">
+  <link rel="stylesheet" href="./modules/media.css">
+  <link rel="stylesheet" href="./modules/collections.css">
+  <link rel="stylesheet" href="./experience.css">
   <script type="module" src="./app.js"></script>
 </head>
-<body>
-  <a class="skip-link" href="#desktop">Skip to the desktop</a>
+<body class="bedroom-mode">
+  <a class="skip-link" href="#bedroom-root">Skip to the bedroom</a>
   <header class="site-header">
     <a class="wordmark" href="./" aria-label="Offline Club home"><span data-icon="flower" data-size="32"></span><span>offline club<span class="wordmark-dot">.</span></span></a>
-    <div class="header-note"><span class="little-dot"></span> a slower corner of the internet</div>
-    <button class="top-about" data-open="about">What is this? <span aria-hidden="true">↗</span></button>
+    <div class="header-note"><span class="little-dot"></span> a little internet time machine</div>
+    <button class="top-about" id="room-about">About this room <span aria-hidden="true">↗</span></button>
   </header>
 
-  <main>
-    <section class="intro" aria-labelledby="page-title">
-      <div><div class="eyebrow">SOMEWHERE AROUND 1998</div><h1 id="page-title">The internet can wait.</h1></div>
-      <p>Play something small. Make something silly.<br>Stay a little longer than you meant to.</p>
-      <div class="sun-doodle" data-icon="sun" data-size="65" aria-hidden="true"></div>
-    </section>
-
+  <main class="bedroom-main">
+    <div id="bedroom-root" tabindex="-1"></div>
+    <footer class="site-footer"><span>Take your shoes off. Stay awhile.</span><span class="footer-flower" data-icon="flower" data-size="20"></span><span>A small place to feel like yourself.</span></footer>
+  </main>
+  <dialog class="computer-dialog" id="computer-dialog" aria-label="Your 1999 computer">
+    <div class="computer-dialog-bar"><span>YOUR OLD PC · OFFLINE DESKTOP</span><button class="room-back-button" id="close-computer">Back to bedroom <span aria-hidden="true">×</span></button></div>
     <section class="computer" aria-label="Your retro personal computer">
       <div class="sticker sticker-left" aria-hidden="true">TAKE IT<br><b>EASY.</b><span>✳</span></div>
       <div class="sticker sticker-right" aria-hidden="true">100%<br><b>YOUR<br>AFTERNOON</b></div>
@@ -45,14 +49,14 @@
                 <button class="desktop-icon" data-open="welcome"><span data-icon="folder" data-size="39"></span><span>Game Room</span></button>
                 <button class="desktop-icon" data-open="paint"><span data-icon="paint" data-size="39"></span><span>Paint Pad</span></button>
                 <button class="desktop-icon" data-open="notes"><span data-icon="notes" data-size="39"></span><span>Notebook</span></button>
-                <button class="desktop-icon" data-open="radio"><span data-icon="radio" data-size="39"></span><span>Rain Radio</span></button>
+                <button class="desktop-icon" data-open="radio"><span data-icon="radio" data-size="39"></span><span>Mixtape Radio</span></button>
                 <button class="desktop-icon" data-open="about"><span data-icon="computer" data-size="39"></span><span>My Computer</span></button>
               </div>
               <div class="desktop-note" aria-hidden="true"><span class="note-pin"></span>it's okay to<br>just be here.<span class="note-flower" data-icon="flower" data-size="23"></span></div>
               <div class="window-layer" id="window-layer"></div>
               <div class="start-menu" id="start-menu" hidden>
                 <div class="start-menu-spine">offline<span>club</span></div>
-                <div class="start-menu-items"><p>Make yourself at home.</p><button data-open="welcome"><span data-icon="folder" data-size="25"></span>Game Room</button><button data-open="paint"><span data-icon="paint" data-size="25"></span>Paint Pad</button><button data-open="notes"><span data-icon="notes" data-size="25"></span>Notebook</button><button data-open="radio"><span data-icon="radio" data-size="25"></span>Rain Radio</button><div class="menu-rule"></div><button id="break-menu"><span data-icon="moon" data-size="25"></span>Take a break…</button></div>
+                <div class="start-menu-items"><p>Make yourself at home.</p><button data-open="welcome"><span data-icon="folder" data-size="25"></span>Game Room</button><button data-open="paint"><span data-icon="paint" data-size="25"></span>Paint Pad</button><button data-open="notes"><span data-icon="notes" data-size="25"></span>Notebook</button><button data-open="radio"><span data-icon="radio" data-size="25"></span>Mixtape Radio</button><div class="menu-rule"></div><button id="break-menu"><span data-icon="moon" data-size="25"></span>Take a break…</button></div>
               </div>
             </div>
             <div class="taskbar"><button class="start-button bevel" id="start-button" aria-expanded="false" aria-controls="start-menu"><span data-icon="flower" data-size="22"></span>Start</button><span class="task-divider"></span><div id="task-buttons" class="task-buttons" aria-label="Open windows"></div><div class="system-tray"><button id="sound-button" aria-label="Enable gentle game sounds" aria-pressed="false" title="Game sounds: off"><span data-icon="volume" data-size="17"></span><span class="muted-cross" aria-hidden="true">×</span></button><time id="clock" aria-label="Local time"></time></div></div>
@@ -65,9 +69,11 @@
       </div>
       <div class="monitor-neck" aria-hidden="true"></div><div class="monitor-foot" aria-hidden="true"></div>
     </section>
-    <div class="under-computer"><span><span class="little-dot"></span> A small place to feel like yourself.</span><span>Made for slow afternoons. <span aria-hidden="true">✳</span></span></div>
-    <footer class="site-footer"><span>Take care out there.</span><span class="footer-flower" data-icon="flower" data-size="20"></span><span>Everything here is yours to explore.</span></footer>
-  </main>
+  </dialog>
+  <dialog class="object-dialog" id="object-dialog" aria-labelledby="object-title">
+    <header class="object-dialog-bar"><h2 id="object-title"></h2><button class="room-back-button" id="close-object">Back to bedroom <span aria-hidden="true">×</span></button></header>
+    <div id="object-content" class="object-content" tabindex="-1"></div>
+  </dialog>
   <div class="sr-only" id="announcer" role="status" aria-live="polite"></div>
 </body>
 </html>

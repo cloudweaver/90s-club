@@ -1,16 +1,38 @@
 # Offline Club
 
-**A little internet time machine.**
+**You’re home. It’s Friday evening, 1999.**
 
-### [Step inside Offline Club →](https://offline-club-98.btc0days.chatgpt.site)
+### [Step inside the bedroom →](https://offline-club-98.btc0days.chatgpt.site)
 
-![A recording of Offline Club's pixel-computer intro and browser desktop](docs/offline-club-preview.gif)
+![A tour of Offline Club’s interactive 1999 bedroom: the computer pops out, the Pokémon binder opens and a tiny virtual pet gets a snack](docs/bedroom-preview.gif)
 
-A beige computer for a slower afternoon. This small retreat, inspired by the early internet, holds three games, a pixel paint pad, a notebook, and a soft rain radio. Move the windows around, make a little picture, or leave yourself a thought.
+[View the full bedroom illustration](docs/bedroom-preview.jpg)
 
-The animation above records the actual site. Its opening intro can be skipped immediately and replayed from **What is this?**; reduced-motion preferences show a still scene. [View a still desktop preview](docs/desktop-preview.jpg).
+The computer is on the desk. Your favourite band is on the wall. There’s a mixtape where you left it, and no school tomorrow. Click something familiar and stay awhile.
 
-Everything runs in your browser. Notes and drawings stay in that browser when local storage is available; sound starts when you choose to play it.
+[Explore the live room](https://offline-club-98.btc0days.chatgpt.site) · [Browse the source on GitHub](https://github.com/cloudweaver/offline-club)
+
+## Look around
+
+- **The computer:** Snake, Mines, Paddle, Paint Pad, a saved notebook, and Mixtape Radio inside a little windowed desktop. Move, minimize, maximize and reopen its windows.
+- **The Walkman and band poster:** eight official music videos from the ’80s and ’90s, including Backstreet Boys, a-ha, TLC and Spice Girls. Flip between mixtape sides or choose another song.
+- **The television:** a visible YouTube player with music-video channels and an official Pokémon clip.
+- **The Pokémon binder:** six original pixel fan portraits. Turn each card over for a small after-school memory; these are not scans of official trading cards.
+- **The virtual pet:** Feed, Play and Nap change your little pal’s mood and meters. It lives for this visit, without an account or saved chores.
+- **The handheld:** Pocket Snake, a playable little game in an original handheld-inspired frame.
+- **The pogs and lava lamp:** mix the stack, spread out three original designs, pick a favourite, or switch the warm light on and off.
+
+On a phone, swipe sideways to explore the room or use the object shortcuts below it. Keyboard focus reveals the same hotspots. The PC’s short introduction can be skipped and replayed; reduced-motion preferences show a still scene.
+
+## Music, saves and privacy
+
+Choosing a media object requests a **visible YouTube player**; Play controls are also available. Videos use official artist or Pokémon uploads through `youtube-nocookie.com` embeds. The player stays visible, and playback stops when its panel closes, the page is hidden, or the player moves out of view. There is no hidden audio player or background music extraction.
+
+Your browser may require another click on YouTube’s own Play button. Availability, regional restrictions, ads and playback are controlled by YouTube; **Watch on YouTube** is always offered as a fallback. Privacy-enhanced embedding still makes requests to Google when the player loads. See [YouTube’s embedding documentation](https://support.google.com/youtube/answer/171780?hl=en).
+
+For continuous listening, the Walkman also links to **SomaFM Underground 80s** and **90s90s Radio** in their own tabs. Those stations use their own players and policies; no radio streams are embedded or rehosted here.
+
+Games, drawings, notebook and collections run locally as static browser code. Notes and drawings stay in local browser storage when available; clearing site data removes them. The site adds no accounts or analytics, and fonts are bundled locally. Loading the hosted room and watching YouTube require a network connection; this is not a service-worker offline app.
 
 ## Open locally
 
@@ -22,38 +44,33 @@ npm run dev
 
 Open `http://127.0.0.1:4178`. The complete website lives in `dist/` and can be hosted as static files.
 
-## Inside the computer
-
-- **Snake:** arrow keys, WASD, or touch controls; collect seeds and avoid the edges. Start, pause, and restart whenever you like.
-- **Mines:** a 9×9 board with 10 hidden stones. The first reveal protects the clicked square and its neighbours. Right-click, press F, or use flag mode. Arrow keys move around the board.
-- **Paddle:** a short match against the computer. Use the keyboard, a pointer, or touch controls. First to five points.
-- **Paint Pad:** pixel brushes, ten colours, an eraser, undo, and a user-triggered PNG download. Arrow keys move the drawing cursor; Space paints.
-- **Notebook:** notes saved in local browser storage, with an undoable Clear action.
-- **Rain Radio:** two original procedural ambient sounds, generated with Web Audio. Sound starts only after pressing Play.
-
-Windows can be moved, minimized, maximized, closed, and reopened from the taskbar. Start also has a **Take a break** screen. Active games and audio pause when hidden or minimized. Game sounds are off by default and are separate from the radio's own controls.
-
-Notes and drawings are stored only in that browser when storage is available. Clearing site data removes them. The site has no accounts, social feeds, analytics, external font requests, or AI service integration. Loading the hosted site still requires a network connection; this is not a service-worker offline app.
-
-## Verification
-
 ```sh
 npm run check
 npm test
 ```
 
-Tests cover snake movement and collisions, mine placement and flood reveal, and paddle collision/scoring logic. Browser checks cover launching the apps, game start/pause, safe first reveal and flags, notebook persistence, paint undo, and opt-in radio playback. Responsive layouts are checked at phone and desktop sizes.
+The checks validate JavaScript syntax. Tests cover Snake movement and collisions, Mines placement and flood reveal, and Paddle collision and scoring logic.
 
-## Source and hosting
+<details>
+<summary>A peek inside the PC — an earlier desktop demo</summary>
 
-- `dist/index.html`, `dist/styles.css`, `dist/app.js`: the desktop shell and window manager.
-- `dist/modules/games.js` and `games.css`: the three original games.
-- `dist/modules/apps.js` and `apps.css`: paint, notes, and radio.
-- `dist/assets/icons.js`: original pixel SVG icons.
-- `.openai/hosting.json`: Sites identity and static deployment directory.
+![An earlier recording of the pixel-computer introduction and desktop games](docs/offline-club-preview.gif)
 
-GitHub holds a copy of the source. Sites manages the hosted deployment; pushing to GitHub alone does not deploy the site. Keep the existing Sites project ID when publishing updates.
+The bedroom now surrounds this little desktop. [View its still preview](docs/desktop-preview.jpg).
 
-## Font credit
+</details>
 
-Pixelify Sans is bundled from the official [Google Fonts repository](https://github.com/google/fonts/tree/main/ofl/pixelifysans), by the Pixelify Sans Project Authors. Its SIL Open Font License is included at `dist/assets/fonts/OFL-PixelifySans.txt`.
+## Source, art and hosting
+
+- `dist/modules/bedroom.js` and `bedroom.css`: the room and interactive hotspots.
+- `dist/modules/media.js` and `media.css`: official visible YouTube embeds and mixtape controls.
+- `dist/modules/collections.js` and `collections.css`: binder, virtual pet, pogs and handheld.
+- `dist/app.js`, `styles.css`, `modules/games.*` and `modules/apps.*`: the desktop, games, paint and notebook.
+- `dist/assets/bedroom-1999.png`: the original room illustration, created with built-in OpenAI image generation from [the art brief](docs/bedroom-art-brief.txt).
+- `.openai/hosting.json`: the existing Sites project identity and static deployment directory.
+
+GitHub holds the source. Sites manages the live deployment; pushing to GitHub alone does not deploy the site. Keep the existing Sites project ID when publishing updates.
+
+This is an unofficial nostalgia fan project. Pixel illustrations and games are original; named characters, artists and brands belong to their respective owners. [Historical references](docs/bedroom-references.md) document the room’s inspirations.
+
+Pixelify Sans is bundled from the official [Google Fonts repository](https://github.com/google/fonts/tree/main/ofl/pixelifysans), by the Pixelify Sans Project Authors. Its [SIL Open Font License](dist/assets/fonts/OFL-PixelifySans.txt) is included.
