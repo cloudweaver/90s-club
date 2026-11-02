@@ -2,7 +2,7 @@
 
 **You’re home. It’s Friday evening, 1999.**
 
-### [Step inside the bedroom →](https://offline-club-98.btc0days.chatgpt.site)
+### [Step inside the bedroom →](https://90s-club.xyz/)
 
 ![A tour of 90's-club’s interactive 1999 bedroom: the computer pops out, the Pokémon binder opens and a tiny virtual pet gets a snack](docs/bedroom-preview.gif)
 
@@ -10,7 +10,7 @@
 
 The computer is on the desk. Your favourite band is on the wall. There’s a mixtape where you left it, and no school tomorrow. Click something familiar and stay awhile.
 
-[Explore the live room](https://offline-club-98.btc0days.chatgpt.site) · [Browse the source on GitHub](https://github.com/cloudweaver/90s-club)
+[Explore the live room](https://90s-club.xyz/) · [Browse the source on GitHub](https://github.com/cloudweaver/90s-club)
 
 ## Look around
 
@@ -66,10 +66,10 @@ The bedroom now surrounds this little desktop. [View its still preview](docs/des
 - `dist/modules/media.js` and `media.css`: official visible YouTube embeds and mixtape controls.
 - `dist/modules/collections.js` and `collections.css`: binder, virtual pet, pogs and handheld.
 - `dist/app.js`, `styles.css`, `modules/games.*` and `modules/apps.*`: the desktop, games, paint and notebook.
-- `dist/assets/bedroom-1999.png`: the original room illustration, created with built-in OpenAI image generation from [the art brief](docs/bedroom-art-brief.txt).
+- `dist/assets/bedroom-1999.webp`: the optimized room illustration; the original PNG remains as a fallback. The art was created with built-in OpenAI image generation from [the art brief](docs/bedroom-art-brief.txt).
 - `.openai/hosting.json`: the existing Sites project identity and static deployment directory.
 
-GitHub holds the source. Sites manages the live deployment; pushing to GitHub alone does not deploy the site. Keep the existing Sites project ID when publishing updates.
+GitHub holds the source. The public domain is hosted in cPanel: upload the contents of `dist/` to `public_html`, preserving the server’s `.htaccess` and certificate-validation files. Pushing to GitHub alone does not deploy the site. The earlier [Sites preview](https://offline-club-98.btc0days.chatgpt.site/) has a separate deployment; keep its existing project ID if updating that preview.
 
 This is an unofficial nostalgia fan project. Pixel illustrations and games are original; named characters, artists and brands belong to their respective owners. [Historical references](docs/bedroom-references.md) document the room’s inspirations.
 

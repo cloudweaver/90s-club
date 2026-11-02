@@ -2,7 +2,7 @@ import { icon } from './assets/icons.js';
 import { mountSnake, mountMines, mountPaddle } from './modules/games.js';
 import { mountPaint, mountNotes } from './modules/apps.js';
 import { mountIntro } from './modules/intro.js';
-import { mountBedroom } from './modules/bedroom.js';
+import { mountBedroom } from './modules/bedroom.js?v=20261102-speed1';
 import { mountMusic, mountTelevision } from './modules/media.js';
 import { mountCollection } from './modules/collections.js';
 
@@ -54,7 +54,7 @@ function focusWindow(id, focus = true) {
   const state = windows.get(id); if (!state) return;
   state.minimized = false; state.el.hidden = false;
   constrainWindow(state);
-  windows.forEach((w, key) => { w.el.classList.toggle('active', key === id); w.task.setAttribute('aria-pressed', String(key === id)); });
+  windows.forEach((w, key) => { if (key !== id && w.el.classList.contains('active')) w.cleanup?.pause?.(); w.el.classList.toggle('active', key === id); w.task.setAttribute('aria-pressed', String(key === id)); });
   state.el.style.zIndex = String(++topZ);
   if (focus) state.el.focus({ preventScroll: true });
 }
@@ -244,7 +244,8 @@ $('#close-object').addEventListener('click', () => closeObject());
 objectDialog.addEventListener('cancel', e => { e.preventDefault(); closeObject(); });
 objectDialog.addEventListener('click', e => { if (e.target === objectDialog) closeObject(); });
 $('#room-about').addEventListener('click', e => openObject('story', e.currentTarget));
-document.addEventListener('visibilitychange', () => { if (document.hidden) { objectCleanup?.pause?.(); windows.forEach(w => w.cleanup?.pause?.()); } });
+document.body.classList.toggle('is-page-hidden', document.hidden);
+document.addEventListener('visibilitychange', () => { document.body.classList.toggle('is-page-hidden', document.hidden); if (document.hidden) { objectCleanup?.pause?.(); windows.forEach(w => w.cleanup?.pause?.()); } });
 $('#break-menu').addEventListener('click', takeBreak); $('#power-button').addEventListener('click', () => $('#break-screen').hidden ? takeBreak() : resume()); $('#resume-button').addEventListener('click', resume);
 function clock() { const now = new Date(); $('#clock').textContent = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', hour12: true }); $('#clock').dateTime = now.toISOString(); }
 clock(); setInterval(clock, 1000 * 15);

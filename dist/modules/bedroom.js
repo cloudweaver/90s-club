@@ -35,7 +35,7 @@ export function mountBedroom(container, { onOpen } = {}) {
     <div class="room-frame">
       <div class="room-viewport" tabindex="0" aria-label="Explore your bedroom. On a small screen, scroll sideways to look around." aria-describedby="${id}-help">
         <div class="room-scene is-lamp-on">
-          <img class="room-art" src="./assets/bedroom-1999.png" width="1536" height="1024" fetchpriority="high" decoding="async" draggable="false" alt="A warmly lit pixel-art bedroom in 1999: a computer, cassette player and trading cards on the desk, posters on the wall, a little television, and a handheld game waiting on the bed.">
+          <picture><source type="image/webp" srcset="./assets/bedroom-1999.webp"><img class="room-art" src="./assets/bedroom-1999.png" width="1536" height="1024" fetchpriority="high" decoding="async" draggable="false" alt="A warmly lit pixel-art bedroom in 1999: a computer, cassette player and trading cards on the desk, posters on the wall, a little television, and a handheld game waiting on the bed."></picture>
           <div class="room-dusk" aria-hidden="true"></div>
           <div class="room-lamp-glow" aria-hidden="true"></div>
           <div class="room-tv-light" aria-hidden="true"></div>

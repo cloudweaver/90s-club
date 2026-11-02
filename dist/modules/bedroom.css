@@ -22,7 +22,7 @@ body.bedroom-mode{color:#eadcc9;background:#211b30;background-image:radial-gradi
 .room-scene{position:relative;width:100%;min-width:720px;aspect-ratio:3/2;isolation:isolate;background:#43364f;overflow:hidden}
 .room-art{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;image-rendering:pixelated;user-select:none;-webkit-user-drag:none}
 .room-dusk{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#3d2d5c0c,transparent 35%,#23152e09);z-index:1}
-.room-lamp-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 20% 30% at 56% 42%,#ffc58033,transparent 78%);mix-blend-mode:screen;opacity:0;transition:opacity .9s;z-index:1}
+.room-lamp-glow{position:absolute;left:45%;top:25%;width:22%;height:34%;contain:paint;pointer-events:none;background:radial-gradient(ellipse closest-side at 50% 50%,#ffc58033,transparent);opacity:0;transition:opacity .9s;z-index:1}
 .is-lamp-on .room-lamp-glow{opacity:1;animation:room-lamp-breathe 11s ease-in-out infinite}
 .room-tv-light{position:absolute;left:72.1%;top:25.3%;width:10.7%;height:12.3%;pointer-events:none;z-index:1;background:repeating-linear-gradient(transparent 0 3px,#edd5ff17 3px 4px);box-shadow:0 0 20px #b89bea10;opacity:.28;animation:room-tv-flicker 8s steps(2,end) infinite}
 .room-hotspot-layer{position:absolute;inset:0;z-index:3;pointer-events:none}
@@ -45,6 +45,9 @@ body.bedroom-mode{color:#eadcc9;background:#211b30;background-image:radial-gradi
 .room-dust{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
 .room-dust i{position:absolute;width:2px;height:2px;background:#f9dca9;opacity:0;animation:room-drift 18s linear infinite}
 .room-dust i:nth-child(1){left:29%;top:28%;animation-delay:-3s}.room-dust i:nth-child(2){left:58%;top:42%;animation-delay:-12s}.room-dust i:nth-child(3){left:75%;top:21%;animation-delay:-8s}.room-dust i:nth-child(4){left:45%;top:61%;animation-delay:-15s}.room-dust i:nth-child(5){left:18%;top:48%;animation-delay:-6s}.room-dust i:nth-child(6){left:65%;top:72%;animation-delay:-10s}
+/* Freeze room-only decoration when it is covered or the page is hidden. */
+body.bedroom-mode.is-page-hidden :is(.room-lamp-glow,.room-tv-light,.room-dust i){animation-play-state:paused}
+body.bedroom-mode:has(>dialog[open]) :is(.room-lamp-glow,.room-tv-light,.room-dust i){animation-play-state:paused}
 .room-under-scene{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:17px 1px 26px}
 .room-under-scene p{font-size:9px;color:#a994ad;margin:0;line-height:1.6}.room-under-scene p>span:first-child{color:#d7b087;font-size:14px;vertical-align:-1px;margin-right:6px}
 .room-pan-hint{display:none}
