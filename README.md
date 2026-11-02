@@ -1,8 +1,16 @@
 # Offline Club
 
-A quiet, pixelated desktop retreat, somewhere around 1998. A beige monitor, a mint-green desktop, original little games, and a small place to make something just for yourself.
+**A little internet time machine.**
 
-On the first visit in a browser session, a short pixel animation introduces the idea. It can be skipped immediately and replayed from **What is this?**. Reduced-motion preferences receive a still scene.
+### [Step inside Offline Club →](https://offline-club-98.btc0days.chatgpt.site)
+
+![A recording of Offline Club's pixel-computer intro and browser desktop](docs/offline-club-preview.gif)
+
+A beige computer for a slower afternoon. This small retreat, inspired by the early internet, holds three games, a pixel paint pad, a notebook, and a soft rain radio. Move the windows around, make a little picture, or leave yourself a thought.
+
+The animation above records the actual site. Its opening intro can be skipped immediately and replayed from **What is this?**; reduced-motion preferences show a still scene. [View a still desktop preview](docs/desktop-preview.jpg).
+
+Everything runs in your browser. Notes and drawings stay in that browser when local storage is available; sound starts when you choose to play it.
 
 ## Open locally
 
