@@ -1,0 +1,48 @@
+.oc-game{--oc-cream:#f7f0dc;--oc-green:#235744;--oc-amber:#e5a750;box-sizing:border-box;width:100%;max-width:500px;margin:auto;padding:8px 10px;color:#235744;background:#f7f0dc;font:12px/1.4 "Courier New",monospace}
+.oc-game *{box-sizing:border-box}
+.oc-game-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:6px;font-size:10px;font-weight:bold;letter-spacing:.055em}
+.oc-game output{font-variant-numeric:tabular-nums;white-space:nowrap}
+.oc-game canvas{display:block;width:100%;max-width:400px;height:auto;margin:0 auto;border:2px solid #235744;box-shadow:inset 2px 2px #b6bea5;image-rendering:pixelated;background:#f7f0dc;touch-action:none}
+.oc-snake canvas{max-width:280px}
+.oc-paddle canvas{max-width:350px}
+.oc-game canvas:focus-visible{outline:2px dashed #b47b36;outline-offset:3px}
+.oc-game-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin:8px 0 5px}
+.oc-game button{min-height:30px;padding:4px 8px;color:#235744;background:#eee9d3;border:2px solid;border-color:#fffdf3 #7a8c71 #7a8c71 #fffdf3;border-radius:0;box-shadow:1px 1px #b2b89d;font:inherit;font-weight:bold;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.oc-game button:active,.oc-game button[aria-pressed="true"]{border-color:#7a8c71 #fffdf3 #fffdf3 #7a8c71;box-shadow:none;background:#e6d8ac}
+.oc-game button:focus-visible{outline:2px dashed #235744;outline-offset:3px}
+.oc-game button:disabled{opacity:.45;cursor:default}
+.oc-game-hint{text-align:center;color:#64715b;font-size:10px;line-height:1.35;margin:4px 0}
+.oc-game-status{min-height:0;margin:4px 0 0;padding:4px 6px;border-top:1px dotted #a9b296;text-align:center;font-size:10px;line-height:1.35}
+.oc-direction-pad{display:flex;gap:5px;justify-content:center;margin:4px auto}
+.oc-direction-pad button{width:36px;padding:0;font-size:17px;min-height:30px}
+.oc-direction-pad [data-direction="left"]{order:0}
+.oc-direction-pad [data-direction="up"]{order:1}
+.oc-direction-pad [data-direction="down"]{order:2}
+.oc-direction-pad [data-direction="right"]{order:3}
+.oc-mine-grid{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));width:100%;max-width:258px;margin:6px auto;padding:3px;background:#aaaF96;border:2px solid;border-color:#7a8c71 #fffdf3 #fffdf3 #7a8c71;gap:1px}
+.oc-mine-row{display:contents}
+.oc-game .oc-mine-cell{aspect-ratio:1;min-width:0;min-height:0;padding:0;margin:0;box-shadow:none;display:grid;place-items:center;font-size:15px;font-weight:bold;line-height:1}
+.oc-game .oc-mine-cell.is-revealed{background:#e9e5cf;border:1px solid #b8bea5;color:#235744}
+.oc-game .oc-mine-cell.is-flagged{color:#90621d}
+.oc-game .oc-mine-cell.is-exploded{background:#e5a750;color:#543a24}
+.oc-game .oc-mine-cell[data-adjacent="2"].is-revealed{color:#64783c}
+.oc-game .oc-mine-cell[data-adjacent="3"].is-revealed{color:#a46933}
+.oc-game .oc-mine-cell[data-adjacent="4"].is-revealed{color:#755950}
+.oc-game .oc-mine-cell:focus-visible{position:relative;z-index:1;outline:2px dashed #235744;outline-offset:-4px}
+.oc-mine-time{font-variant-numeric:tabular-nums}
+.oc-paddle-touch{display:flex;justify-content:center;gap:10px;margin:5px auto}
+.oc-paddle-touch button{min-width:76px;touch-action:none;user-select:none}
+@media(max-width:420px){.oc-game{padding:8px}
+.oc-game-top{font-size:10px}
+.oc-game-controls{gap:5px}
+.oc-game button{padding:4px 8px;font-size:11px}
+.oc-mine-row{display:contents}
+.oc-game .oc-mine-cell{font-size:15px}
+.oc-game-hint{font-size:10px}
+}
+@media(pointer:coarse){.oc-game-controls button,.oc-direction-pad button,.oc-paddle-touch button{min-height:40px;min-width:40px}
+.oc-mine-grid{max-width:288px}
+}
+@media(prefers-reduced-motion:reduce){.oc-game *{scroll-behavior:auto}
+}
+

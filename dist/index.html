@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3efdf">
+  <meta name="description" content="A little desktop escape, somewhere around 1998. Play a small game, draw something, or listen to the rain. Make yourself at home.">
+  <meta property="og:title" content="Offline Club — a little internet time machine">
+  <meta property="og:description" content="A few old favorites. A blank page. A slower afternoon. Make yourself at home.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://offline-club-98.btc0days.chatgpt.site">
+  <title>Offline Club — somewhere around 1998</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./modules/games.css">
+  <link rel="stylesheet" href="./modules/apps.css">
+  <link rel="stylesheet" href="./modules/intro.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#desktop">Skip to the desktop</a>
+  <header class="site-header">
+    <a class="wordmark" href="./" aria-label="Offline Club home"><span data-icon="flower" data-size="32"></span><span>offline club<span class="wordmark-dot">.</span></span></a>
+    <div class="header-note"><span class="little-dot"></span> a slower corner of the internet</div>
+    <button class="top-about" data-open="about">What is this? <span aria-hidden="true">↗</span></button>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><div class="eyebrow">SOMEWHERE AROUND 1998</div><h1 id="page-title">The internet can wait.</h1></div>
+      <p>Play something small. Make something silly.<br>Stay a little longer than you meant to.</p>
+      <div class="sun-doodle" data-icon="sun" data-size="65" aria-hidden="true"></div>
+    </section>
+
+    <section class="computer" aria-label="Your retro personal computer">
+      <div class="sticker sticker-left" aria-hidden="true">TAKE IT<br><b>EASY.</b><span>✳</span></div>
+      <div class="sticker sticker-right" aria-hidden="true">100%<br><b>YOUR<br>AFTERNOON</b></div>
+      <div class="monitor-case">
+        <div class="screen-surround">
+          <div class="screen" id="screen">
+            <div class="os-menubar"><span><span data-icon="computer" data-size="15"></span> offline desktop</span><span class="os-edition">personal edition · v.98</span></div>
+            <div class="desktop" id="desktop" tabindex="-1" aria-label="Retro desktop. Choose a desktop icon or use the Start menu.">
+              <div class="wallpaper" aria-hidden="true"><div class="pixel-cloud cloud-one"></div><div class="pixel-cloud cloud-two"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="wallpaper-grass"></div></div>
+              <div class="desktop-icons" aria-label="Desktop shortcuts">
+                <button class="desktop-icon" data-open="welcome"><span data-icon="folder" data-size="39"></span><span>Game Room</span></button>
+                <button class="desktop-icon" data-open="paint"><span data-icon="paint" data-size="39"></span><span>Paint Pad</span></button>
+                <button class="desktop-icon" data-open="notes"><span data-icon="notes" data-size="39"></span><span>Notebook</span></button>
+                <button class="desktop-icon" data-open="radio"><span data-icon="radio" data-size="39"></span><span>Rain Radio</span></button>
+                <button class="desktop-icon" data-open="about"><span data-icon="computer" data-size="39"></span><span>My Computer</span></button>
+              </div>
+              <div class="desktop-note" aria-hidden="true"><span class="note-pin"></span>it's okay to<br>just be here.<span class="note-flower" data-icon="flower" data-size="23"></span></div>
+              <div class="window-layer" id="window-layer"></div>
+              <div class="start-menu" id="start-menu" hidden>
+                <div class="start-menu-spine">offline<span>club</span></div>
+                <div class="start-menu-items"><p>Make yourself at home.</p><button data-open="welcome"><span data-icon="folder" data-size="25"></span>Game Room</button><button data-open="paint"><span data-icon="paint" data-size="25"></span>Paint Pad</button><button data-open="notes"><span data-icon="notes" data-size="25"></span>Notebook</button><button data-open="radio"><span data-icon="radio" data-size="25"></span>Rain Radio</button><div class="menu-rule"></div><button id="break-menu"><span data-icon="moon" data-size="25"></span>Take a break…</button></div>
+              </div>
+            </div>
+            <div class="taskbar"><button class="start-button bevel" id="start-button" aria-expanded="false" aria-controls="start-menu"><span data-icon="flower" data-size="22"></span>Start</button><span class="task-divider"></span><div id="task-buttons" class="task-buttons" aria-label="Open windows"></div><div class="system-tray"><button id="sound-button" aria-label="Enable gentle game sounds" aria-pressed="false" title="Game sounds: off"><span data-icon="volume" data-size="17"></span><span class="muted-cross" aria-hidden="true">×</span></button><time id="clock" aria-label="Local time"></time></div></div>
+            <div class="screen-grain" aria-hidden="true"></div>
+            <div class="break-screen" id="break-screen" hidden><span data-icon="moon" data-size="72"></span><p>Nothing urgent.</p><span>Take all the time you need.</span><button class="bevel" id="resume-button">Back to the desktop</button></div>
+            <div class="project-intro" id="project-intro" role="dialog" aria-modal="true" aria-label="Welcome to Offline Club" hidden></div>
+          </div>
+        </div>
+        <div class="monitor-chin"><div class="hardware-brand"><span class="hardware-emblem">oc</span><span>OFFLINE CLUB<span class="hardware-model">PERSONAL COMPUTER</span></span></div><div class="chin-middle"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><button class="power-button" id="power-button" aria-label="Take a break from the screen" title="Take a break"><span class="power-led"></span><span class="power-glyph" aria-hidden="true">⏻</span></button></div>
+      </div>
+      <div class="monitor-neck" aria-hidden="true"></div><div class="monitor-foot" aria-hidden="true"></div>
+    </section>
+    <div class="under-computer"><span><span class="little-dot"></span> A small place to feel like yourself.</span><span>Made for slow afternoons. <span aria-hidden="true">✳</span></span></div>
+    <footer class="site-footer"><span>Take care out there.</span><span class="footer-flower" data-icon="flower" data-size="20"></span><span>Everything here is yours to explore.</span></footer>
+  </main>
+  <div class="sr-only" id="announcer" role="status" aria-live="polite"></div>
+</body>
+</html>
