@@ -5,6 +5,12 @@ body.bedroom-mode{color:#eadcc9;background:#211b30;background-image:radial-gradi
 .bedroom-mode .header-note{color:#b6a4bc}
 .bedroom-mode .little-dot{background:#deac83;box-shadow:0 0 0 3px #deac8310}
 .bedroom-mode .top-about{color:#c6b3c9;text-decoration-color:#95829c}
+.header-actions{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.github-link{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;flex-shrink:0;color:#eadcc9;border:1px solid #b2a2bd55;background:#382b433d;box-shadow:2px 2px #140f2166;text-decoration:none}
+.github-link svg{display:block}
+.github-link:hover{color:#f5e7ce;background:#5a3d5460;border-color:#d9b28b8c}
+.github-link:focus-visible{outline:2px solid #e6bb8e;outline-offset:4px}
+@media(max-width:540px){.header-actions{gap:9px}.bedroom-mode .top-about{font-size:9px}.top-about span{margin-left:4px}}
 .bedroom-mode main{max-width:1416px;padding:0 28px}
 .bedroom{--room-cream:#f4e5cb;--room-muted:#b9a8bc;--room-amber:#eac09a;position:relative;width:100%;max-width:1360px;margin:0 auto;padding:0 0 25px;font-family:'Courier New',monospace;color:var(--room-cream)}
 .room-intro{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 2px 24px}
@@ -66,3 +72,5 @@ body.bedroom-mode:has(>dialog[open]) :is(.room-lamp-glow,.room-tv-light,.room-du
 @media(max-width:720px){.room-pan-hint{display:inline}.room-under-scene{align-items:flex-start}.room-under-scene p{max-width:230px}.room-quick-heading small{display:none}.room-scene-note{font-size:8px}}
 @media(max-width:540px){.bedroom-mode .site-header{height:68px;padding:0 16px}.bedroom-mode .wordmark{font-size:26px}.bedroom-mode main{padding:0 14px}.room-intro{display:block;padding:23px 1px 20px}.room-greeting h1{font-size:34px;letter-spacing:-.5px}.room-eyebrow{font-size:7px;letter-spacing:1.15px;margin-bottom:9px}.room-copy{font-size:10px;margin-top:8px}.room-badges{padding-top:16px;flex-direction:row;align-items:center;justify-content:space-between;gap:10px}.room-evening{border:0;padding:0;font-size:9px}.room-date{font-size:7px;letter-spacing:.5px}.room-frame{box-shadow:0 10px 35px #100b1c80,0 0 0 3px #2d243c}.room-under-scene{gap:14px;margin-top:13px;margin-bottom:22px}.room-under-scene p{max-width:195px;font-size:8px}.room-under-scene p>span:first-child{font-size:11px;margin-right:3px}.room-pan-hint{display:block;margin-top:2px}.room-label-toggle{font-size:8px;padding-top:3px}.room-label-toggle>span{margin-left:3px}.room-quick-heading{font-size:8px;letter-spacing:1.4px;margin-bottom:10px}.room-quick-buttons{gap:6px}.room-quick-button{flex:1 0 calc(33.333% - 6px);justify-content:center;min-height:42px;padding:9px 7px;font-size:9px;gap:5px}.room-quick-arrow{display:none}.room-status{font-size:8px;margin-top:15px}.room-tooltip{font-size:14px;min-width:115px}}
 @media(prefers-reduced-motion:reduce){.room-dust{display:none}.room-lamp-glow,.room-tv-light{animation:none!important}.room-hotspot,.room-tooltip,.room-quick-button,.room-lamp-glow{transition:none!important}.room-viewport{scroll-behavior:auto}}
+
+@media(max-width:360px){.bedroom-mode .wordmark{font-size:23px;gap:6px}.bedroom-mode .wordmark svg{width:24px;height:24px}.header-actions{gap:7px}.top-about span{display:none}}
